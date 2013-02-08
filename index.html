@@ -15,7 +15,7 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			mixpanel.track("Page Load");
-			$(".fb_partage").click(function(){
+			$("a[name=fb_share]").click(function(){
 				mixpanel.track("Partage");
 			});
 			$(".fb_love").click(function(){
@@ -62,7 +62,7 @@
 
 
 		<iframe  class="fb_love" src="http://www.facebook.com/plugins/like.php?href=http://hantse.github.com/SqLiteQuery/index.html&layout=standard&show_faces=false&width=450&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height:25px"></iframe>
-      	<a class="fb_partage" name="fb_share" type="box_count" share_url="http://hantse.github.com/SqLiteQuery/index.html"></a>	
+      	<a name="fb_share" type="box_count" share_url="http://hantse.github.com/SqLiteQuery/index.html"></a>	
       	
       </section>
     </div>
