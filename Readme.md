@@ -47,13 +47,15 @@ Notes : Retourne une Boolean.
 Constructeur possibles
 ----------------------
 	
-	public Query(string Source) : base(Source){}
-	
-	public Query(string Source, string Version) : base(Source, Version){}
-        
-	public Query(string Source, string Version, Boolean New) : base(Source, Version, New){}
-        
-	public Query(string Source, string Version, Boolean New, Boolean Compress) : base(Source, Version, New, Compress){}
+	public Query (string source): base (source) {}
+
+	public Query (string source, string version): base (source, version) {}
+
+	public Query (string source, string version, string password): base (source, version, password) {}
+
+	public Query (string source, string version, string password, new Boolean): base (Source, Version, Password, New) {}
+
+	public Query (string source, string version, string password, new Boolean, Boolean Compress): base (Source, Version, Password, New, Compress) {}
 
 
 
@@ -108,6 +110,8 @@ Constructor
 
 	public Query (string source, string version): base (source, version) {}
 
-	public Query (string source, string version, New Boolean): base (Source, Version, New) {}
+	public Query (string source, string version, string password): base (source, version, password) {}
 
-	public Query (string source, string version, New Boolean, Boolean Compress): base (Source, Version, New, Compress) {}
+	public Query (string source, string version, string password, new Boolean): base (Source, Version, Password, New) {}
+
+	public Query (string source, string version, string password, new Boolean, Boolean Compress): base (Source, Version, Password, New, Compress) {}
