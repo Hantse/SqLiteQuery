@@ -8,7 +8,7 @@ using System.Data.SQLite;
 
 namespace SqLiteQuery
 {
-    public class Query : Read
+    public class Query : CUD
     {
         public Query(string Source) : base(Source){}
         public Query(string Source, string Version) : base(Source, Version){}
@@ -31,6 +31,21 @@ namespace SqLiteQuery
             }
             return true;
 
+        }
+
+        public int CountAction(String Query, ref Exception Error)
+        {
+            try
+            {
+                base._SqLiteCommand.CommandText = Query;
+                String Count = base._SqLiteCommand.ExecuteScalar().ToString();
+                return int.Parse(Count);
+            }
+            catch (Exception e)
+            {
+                Error = e;
+                return 0;
+            }
         }
     }
 }
