@@ -7,7 +7,7 @@ using System.Data.SQLite;
 
 namespace SqLiteQuery
 {
-    class CUD : Read
+    public class CUD : Read
     {
         public CUD(string Source) : base(Source){}
         public CUD(string Source, string Version) : base(Source, Version){}

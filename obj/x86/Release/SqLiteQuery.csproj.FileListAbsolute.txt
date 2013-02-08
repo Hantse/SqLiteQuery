@@ -1,5 +1,4 @@
 H:\Drive\SkyDrive\Projects\DLL\SqLiteQuery\SqLiteQuery\bin\x86\Release\SqLiteQuery.dll
 H:\Drive\SkyDrive\Projects\DLL\SqLiteQuery\SqLiteQuery\bin\x86\Release\SqLiteQuery.pdb
-H:\Drive\SkyDrive\Projects\DLL\SqLiteQuery\SqLiteQuery\obj\x86\Release\SqLiteQuery.csprojResolveAssemblyReference.cache
 H:\Drive\SkyDrive\Projects\DLL\SqLiteQuery\SqLiteQuery\obj\x86\Release\SqLiteQuery.dll
 H:\Drive\SkyDrive\Projects\DLL\SqLiteQuery\SqLiteQuery\obj\x86\Release\SqLiteQuery.pdb

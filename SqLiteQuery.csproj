@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CUD.cs" />
     <Compile Include="Query.cs" />
     <Compile Include="Read.cs" />
     <Compile Include="SqLiteQuery.cs" />
