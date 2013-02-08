@@ -54,3 +54,60 @@ Constructeur possibles
 	public Query(string Source, string Version, Boolean New) : base(Source, Version, New){}
         
 	public Query(string Source, string Version, Boolean New, Boolean Compress) : base(Source, Version, New, Compress){}
+
+
+
+
+English
+--------
+
+- Library DLL to facilitate database management SqLite under. Net.
+- Pévus for Visual Studio 2012 - x86.
+
+
+Installation
+------------
+- Go http://system.data.sqlite.org/index.html/doc/trunk/www/downloads.wiki
+- Download and install sqlite-netFx45-setup-bundle-x86-2012-1.0.84.0.exe
+
+
+Base
+----
+- Add a reference to the project SqLiteQuery.dll
+- Add the following directive in the file or you want to use the DLL:
+	using SqLiteQuery;
+
+
+Variables minimum
+-----------------
+1) Create an instance of Query
+
+	Query Q = new Query ("Source.db");
+
+2) Create a variable Exception
+
+	Exception E;
+
+Note: The exception variable is used to retrieve the errors in queries.
+
+Queries available
+--------------------
+Coming.
+
+Custom requests without return
+---------------------------------
+
+	Q.ExecuteQuery ("QUERY", E);
+
+Notes: Returns a Boolean.
+
+Constructor
+----------------------
+
+	public Query (string source): base (source) {}
+
+	public Query (string source, string version): base (source, version) {}
+
+	public Query (string source, string version, New Boolean): base (Source, Version, New) {}
+
+	public Query (string source, string version, New Boolean, Boolean Compress): base (Source, Version, New, Compress) {}
