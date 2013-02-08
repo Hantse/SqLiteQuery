@@ -31,62 +31,19 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>Soon.</h3>
-	Français
---------
-
-- Librairie DLL pour faciliter la gestion de base SqLite sous .Net.
-- Pévus pour Visual Studio 2012 - x86.
-
-
-Installation
-------------
-- Aller sur http://system.data.sqlite.org/index.html/doc/trunk/www/downloads.wiki
-- Télécharger et installer sqlite-netFx45-setup-bundle-x86-2012-1.0.84.0.exe
+        <h3>Introduction</h3>
+	<ul>
+		<li>Librairie DLL pour faciliter la gestion de base SqLite sous .Net</li>
+		<li>Pévus pour Visual Studio 2012 - x86</li>
+	</ul>
 
 
-Base
-----
-- Ajouter en référence au projet SqLiteQuery.dll
-- Ajouter la directive suivante dans la fichier ou vous souhaiter utiliser la DLL :
-	using SqLiteQuery;
-
+	<h3>Installation</h3>
 	
-Variables minimum
------------------
-1) Crée une instance de Query 
-
-	Query Q = new Query("Source.db");
-	
-2) Crée une variables d'Exception
-	
-	Exception E;
-	
-Notes : La variable d'exception sert a récupérer les erreurs lors de requêtes.
-
-Requêtes disponibles
---------------------
-A Venir.
-
-Requêtes personnalisé sans retour
----------------------------------
-	
-	 Q.ExecuteQuery("QUERY", E);
-	 
-Notes : Retourne une Boolean.
-
-Constructeur possibles
-----------------------
-	
-	public Query (string source): base (source) {}
-
-	public Query (string source, string version): base (source, version) {}
-
-	public Query (string source, string version, string password): base (source, version, password) {}
-
-	public Query (string source, string version, string password, new Boolean): base (Source, Version, Password, New) {}
-
-	public Query (string source, string version, string password, new Boolean, Boolean Compress): base (Source, Version, Password, New, Compress) {}
+	<ul>
+		<li>Aller sur http://system.data.sqlite.org/index.html/doc/trunk/www/downloads.wiki</li>
+		<li>Télécharger et installer sqlite-netFx45-setup-bundle-x86-2012-1.0.84.0.exe</li>
+	</ul>
 
 
 		<iframe src="http://www.facebook.com/plugins/like.php?href=http://hantse.github.com/SqLiteQuery/index.html&layout=standard&show_faces=false&width=450&action=like&colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:450px; height:25px"></iframe>
