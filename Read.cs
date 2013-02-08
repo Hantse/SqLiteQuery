@@ -14,8 +14,9 @@ namespace SqLiteQuery
 
         public Read(string Source) : base(Source){}
         public Read(string Source, string Version) : base(Source, Version){}
-        public Read(string Source, string Version, Boolean New) : base(Source, Version, New){}
-        public Read(string Source, string Version, Boolean New, Boolean Compress) : base(Source, Version, New, Compress) { }
+        public Read(string Source, string Version, string Password) : base(Source, Version, Password) { }
+        public Read(string Source, string Version, string Password, Boolean New) : base(Source, Version, Password, New) { }
+        public Read(string Source, string Version, string Password, Boolean New, Boolean Compress) : base(Source, Version, Password, New, Compress) { }
 
         public SQLiteDataReader ReadData(String Query)
         {

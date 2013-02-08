@@ -2,3 +2,4 @@ H:\Drive\SkyDrive\Projects\DLL\SqLiteQuery\SqLiteQuery\bin\x86\Debug\SqLiteQuery
 H:\Drive\SkyDrive\Projects\DLL\SqLiteQuery\SqLiteQuery\bin\x86\Debug\SqLiteQuery.pdb
 H:\Drive\SkyDrive\Projects\DLL\SqLiteQuery\SqLiteQuery\obj\x86\Debug\SqLiteQuery.dll
 H:\Drive\SkyDrive\Projects\DLL\SqLiteQuery\SqLiteQuery\obj\x86\Debug\SqLiteQuery.pdb
+H:\Drive\SkyDrive\Projects\DLL\SqLiteQuery\SqLiteQuery\obj\x86\Debug\SqLiteQuery.csprojResolveAssemblyReference.cache

@@ -26,17 +26,25 @@ namespace SqLiteQuery
             _SqLiteCommand = _SqLiteConnection.CreateCommand();
             _SqLiteConnection.Open();
         }
-
-        public SqLiteQuery(string Source, string Version, Boolean New)
+        
+        public SqLiteQuery(string Source, string Version, string Password)
         {
-            _SqLiteConnection = new SQLiteConnection("Data Source=" + Source + ";Version=" + Version + ";New=" + New + ";Compress=True;");
+            _SqLiteConnection = new SQLiteConnection("Data Source=" + Source + ";Version=" + Version + ";Password=" + Password + ";New=False;Compress=True;");
             _SqLiteCommand = _SqLiteConnection.CreateCommand();
             _SqLiteConnection.Open();
         }
 
-        public SqLiteQuery(string Source, string Version, Boolean New, Boolean Compress)
+
+        public SqLiteQuery(string Source, string Version,  string Password, Boolean New)
         {
-            _SqLiteConnection = new SQLiteConnection("Data Source=" + Source + ";Version=" + Version + ";New=" + New + ";Compress=" + Compress + ";");
+            _SqLiteConnection = new SQLiteConnection("Data Source=" + Source + ";Version=" + Version + ";Password=" + Password + ";New=" + New + ";Compress=True;");
+            _SqLiteCommand = _SqLiteConnection.CreateCommand();
+            _SqLiteConnection.Open();
+        }
+
+        public SqLiteQuery(string Source, string Version,  string Password, Boolean New, Boolean Compress)
+        {
+            _SqLiteConnection = new SQLiteConnection("Data Source=" + Source + ";Version=" + Version + ";Password=" + Password + ";New=" + New + ";Compress=" + Compress + ";");
             _SqLiteCommand = _SqLiteConnection.CreateCommand();
             _SqLiteConnection.Open();
         }

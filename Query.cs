@@ -12,8 +12,9 @@ namespace SqLiteQuery
     {
         public Query(string Source) : base(Source){}
         public Query(string Source, string Version) : base(Source, Version){}
-        public Query(string Source, string Version, Boolean New) : base(Source, Version, New){}
-        public Query(string Source, string Version, Boolean New, Boolean Compress) : base(Source, Version, New, Compress){}
+        public Query(string Source, string Version, string Password) : base(Source, Version, Password) { }
+        public Query(string Source, string Version, string Password, Boolean New) : base(Source, Version, Password, New) { }
+        public Query(string Source, string Version, string Password, Boolean New, Boolean Compress) : base(Source, Version, Password, New, Compress){}
 
         public Boolean ExecuteQuery(string Query, ref Exception Error)
         {
