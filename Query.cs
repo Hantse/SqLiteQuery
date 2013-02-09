@@ -54,15 +54,51 @@ namespace SqLiteQuery
             try
             {
                 StreamReader SR = new StreamReader(File);
+                string sBatchString;
+                int Pos = 0;
+                int PosGo = 0;
+                string Query = "";
+
+                if (SR != null)
+                {
+                    sBatchString = SR.ReadToEnd();
+                    SR.Close();
+
+                    while ((PosGo = sBatchString.IndexOf("\r\nGO", Pos)) > -1)
+                    {
+                        Query = sBatchString.Substring(Pos, PosGo - Pos);
+                        Pos = PosGo + 4;
+                        ExecuteQuery(Query, ref Error);
+                    }
+
+                }
+
+                ExecuteQuery(Query, ref Error);
+            }
+            catch (Exception e)
+            {
+                Error = e;
+                return false;
+            }
+
+            return true;
+        }
+
+        public Boolean ExecuteSqlFile(string File, ref Exception Error, ref string RQuery)
+        {
+            try
+            {
+                StreamReader SR = new StreamReader(File);
                 string Line = "";
                 string Query = "";
 
                 do
                 {
-                    Line = SR.ReadLine();
+                    Line = SR.ReadLine() + "\n";
                     Query += Line;
                 } while (Line != null);
 
+                RQuery = Query;
                 ExecuteQuery(Query, ref Error);
             }
             catch (Exception e)

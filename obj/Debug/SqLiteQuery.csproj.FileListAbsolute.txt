@@ -1,0 +1,6 @@
+H:\Drive\SkyDrive\Projects\DLL\SqLiteQuery\SqLiteQuery\bin\Debug\SqLiteQuery.dll
+H:\Drive\SkyDrive\Projects\DLL\SqLiteQuery\SqLiteQuery\bin\Debug\SqLiteQuery.pdb
+H:\Drive\SkyDrive\Projects\DLL\SqLiteQuery\SqLiteQuery\bin\Debug\System.Data.SQLite.dll
+H:\Drive\SkyDrive\Projects\DLL\SqLiteQuery\SqLiteQuery\bin\Debug\System.Data.SQLite.xml
+H:\Drive\SkyDrive\Projects\DLL\SqLiteQuery\SqLiteQuery\obj\Debug\SqLiteQuery.dll
+H:\Drive\SkyDrive\Projects\DLL\SqLiteQuery\SqLiteQuery\obj\Debug\SqLiteQuery.pdb
