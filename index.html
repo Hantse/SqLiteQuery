@@ -75,6 +75,17 @@
 				mixpanel.track("Partage Facebook");
 				mixpanel.track("Facebook");
 			});
+			$(".zip_download_link").click(function(){
+				mixpanel.track("Download Zip");
+				mixpanel.track("Download");
+			});
+			$(".tar_download_link").click(function(){
+				mixpanel.track("Download Tar");
+				mixpanel.track("Download");
+			});
+			$("#forkme_banner").click(function(){
+				mixpanel.track("Github Source");
+			});
 		});
 	</script>
 
