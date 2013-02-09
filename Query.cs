@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 using System.Data.SQLite;
 
 namespace SqLiteQuery
 {
-    public class Query : CUD
+    public sealed class Query : CUD
     {
         public Query(string Source) : base(Source){}
         public Query(string Source, string Version) : base(Source, Version){}
@@ -46,6 +47,31 @@ namespace SqLiteQuery
                 Error = e;
                 return 0;
             }
+        }
+
+        public Boolean ExecuteSqlFile(string File, ref Exception Error)
+        {
+            try
+            {
+                StreamReader SR = new StreamReader(File);
+                string Line = "";
+                string Query = "";
+
+                do
+                {
+                    Line = SR.ReadLine();
+                    Query += Line;
+                } while (Line != null);
+
+                ExecuteQuery(Query, ref Error);
+            }
+            catch (Exception e)
+            {
+                Error = e;
+                return false;
+            }
+
+            return true;
         }
     }
 }
