@@ -67,6 +67,14 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 			mixpanel.track("Page Load");
+			$(".fb_love").click(function(){
+				mixpanel.track("J'aime Facebook");
+				mixpanel.track("Facebook");
+			});
+			$("a[name=fb_share]").click(function(){
+				mixpanel.track("Partage Facebook");
+				mixpanel.track("Facebook");
+			});
 		});
 	</script>
 
