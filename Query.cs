@@ -51,29 +51,12 @@ namespace SqLiteQuery
 
         public Boolean ExecuteSqlFile(string File, ref Exception Error)
         {
+            Boolean ret = false;
             try
             {
                 StreamReader SR = new StreamReader(File);
-                string sBatchString;
-                int Pos = 0;
-                int PosGo = 0;
-                string Query = "";
-
-                if (SR != null)
-                {
-                    sBatchString = SR.ReadToEnd();
-                    SR.Close();
-
-                    while ((PosGo = sBatchString.IndexOf("\r\nGO", Pos)) > -1)
-                    {
-                        Query = sBatchString.Substring(Pos, PosGo - Pos);
-                        Pos = PosGo + 4;
-                        ExecuteQuery(Query, ref Error);
-                    }
-
-                }
-
-                ExecuteQuery(Query, ref Error);
+                string Query = SR.ReadToEnd();
+                ret = ExecuteQuery(Query, ref Error);
             }
             catch (Exception e)
             {
@@ -81,25 +64,18 @@ namespace SqLiteQuery
                 return false;
             }
 
-            return true;
+            return ret;
         }
 
         public Boolean ExecuteSqlFile(string File, ref Exception Error, ref string RQuery)
         {
+            Boolean ret = false;
             try
             {
                 StreamReader SR = new StreamReader(File);
-                string Line = "";
-                string Query = "";
-
-                do
-                {
-                    Line = SR.ReadLine() + "\n";
-                    Query += Line;
-                } while (Line != null);
-
+                string Query = SR.ReadToEnd();
                 RQuery = Query;
-                ExecuteQuery(Query, ref Error);
+                ret = ExecuteQuery(Query, ref Error);
             }
             catch (Exception e)
             {
@@ -107,7 +83,7 @@ namespace SqLiteQuery
                 return false;
             }
 
-            return true;
+            return ret;
         }
     }
 }
